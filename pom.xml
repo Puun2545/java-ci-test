@@ -4,13 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>test</groupId>
-    <artifactId>simple-maven-project-with-tests</artifactId>
+    <artifactId>simple-maven</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.0</version>
+    <version>${project.version}</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <project.version>${env.MAVEN_VERSION}</project.version>
     </properties>
 
     <build>
@@ -33,6 +34,18 @@
                                 </transformer>
                             </transformers>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
