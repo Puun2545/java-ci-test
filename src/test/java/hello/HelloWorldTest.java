@@ -9,7 +9,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 
-public class MainClassTest {
+public class HelloWorldTest {
 
     public void testMain() {
         // Setup
